@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mayank Aaswani - Portfolio</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- AOS Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+</head>
+
+<body class="theme-dark">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Mayank.dev</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button onclick="setTheme('theme-light')">🌞</button></li>
+        <li><button onclick="setTheme('theme-dark')">🌙</button></li>
+        <li><button onclick="setTheme('theme-colorful')">🌈</button></li>
+      </ul>
+    </nav>
+  </header>
+  <br><br><br>
+
+<!-- ✅ HERO SECTION - 3 COLUMN LAYOUT -->
+<section class="hero-3column">
+  <div class="hero-left">
+    <!-- Lottie Animation -->
+    <lottie-player
+      src="https://assets10.lottiefiles.com/packages/lf20_kyu7xb1v.json"
+      background="transparent"
+      speed="1"
+      style="width: 100%; height: 300px"
+      loop autoplay>
+    </lottie-player>
+  </div>
+
+  <div class="hero-center">
+    <h2>Hello, It's Me</h2>
+    <h1>Mayank Aaswani</h1>
+    <h3>And I'm a <span id="typed-text"></span></h3>
+    <div class="resume-buttons">
+      <a href="Mayank_Aaswani_Formatted_Resume.pdf" download class="btn">⬇ Download Resume</a>
+      <a href="Mayank_Aaswani_Formatted_Resume.pdf" target="_blank" class="btn btn-outline">👁 View Resume</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="glow-img">
+      <img src="Mayank real photo 2.jpg" alt="Mayank Aaswani">
+    </div>
+  </div>
+</section>
+
+<!-- ✅ SCRIPT FOR TYPED JS -->
+<script>
+  var typed = new Typed("#typed-text", {
+    strings: ["Web Developer", "Frontend Learner", "Python Enthusiast", "Intern @ SkillCraft"],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+</script>
+
+<!-- ✅ CSS FOR HERO SECTION + Resume Buttons + Certificates -->
+<style>
+.hero-3column {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+.hero-left, .hero-center, .hero-right {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.hero-center h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: var(--text);
+}
+
+.hero-center h2 {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.hero-center h3 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-top: 1rem;
+}
+
+.resume-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-buttons .btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  text-decoration: none;
+}
+
+.resume-buttons .btn:hover {
+  transform: scale(1.05);
+  background: #2563eb;
+}
+
+.resume-buttons .btn-outline {
+  background: none;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.resume-buttons .btn-outline:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.glow-img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.glow-img img {
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.cert-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cert-grid img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero-3column {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<br><br><br>
+
+
+
+  <!-- ABOUT -->
+<section id="about" class="section about"  data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
+    <h2>About Me</h2>
+    <p>I’m a BCA student at Poornima University with a passion for front-end development. Currently interning at SkillCraft Technology using HTML, CSS, JavaScript, and Python.</p>
+  </section>
+
+  <!-- SKILLS -->
+<section id="skills" class="section skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul class="skill-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Git & GitHub</li>
+    </ul>
+    <div class="icon-grid">
+      <i class="devicon-html5-plain-wordmark colored"></i>
+      <i class="devicon-css3-plain-wordmark colored"></i>
+      <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-python-plain colored"></i>
+      <i class="devicon-git-plain colored"></i>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+<section id="projects" class="section projects" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <a class="project-card" href="project1.html">
+        <h3>Responsive Web App</h3>
+        <p>Mobile-first HTML/CSS layout</p>
+      </a>
+      <a class="project-card" href="project2.html">
+        <h3>Stopwatch App</h3>
+        <p>JS timer with control buttons</p>
+      </a>
+      <a class="project-card" href="project3.html">
+        <h3>Tic Tac Toe Game</h3>
+        <p>Classic 2-player game logic</p>
+      </a>
+      <a class="project-card" href="project4.html">
+        <h3>To-Do List</h3>
+        <p>Task manager with deadlines</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+<section id="certificates" class="section certificates" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
+    <h2>Certificates</h2>
+    <div class="cert-grid">
+      <img src="Poornim a' certificae.png" alt="Certificate 1" />
+      <img src="java Linkdin certificate.png" alt="Certificate 2" />
+      <img src="Nptel certificate.png" alt="Certificate 3" />
+    </div>
+
+  </section>
+<!-- contacttt -->
+  <section class="section contact-info" id="contact" style="text-align: center; padding: 4rem 2rem;">
+  <h2 style="margin-bottom: 2rem;">📬 Contact Info</h2>
+  <div class="contact-card">
+    <p><strong>Email:</strong> <a href="mailto:mmmayankaaaswani@gmail.com">mmmayankaaaswani@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+919079179916">+91 90791 79916</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mayank-aaswani-2a2559321" target="_blank">linkedin.com/in/mayank-aaswani</a></p>
+    <p><strong>Location:</strong> Jaipur, India</p>
+  </div>
+</section>
+
+
+
+  <!-- CONTACT -->
+<section id="contact" class="section contact" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="200">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Mayank Aaswani. Built with ❤️</p>
+  </footer>
+
+  <!-- JS -->
+ <script>
+  function setTheme(theme) {
+    document.body.classList.remove('theme-light', 'theme-dark', 'theme-colorful');
+    document.body.classList.add(theme);
+  }
+
+  var typed = new Typed("#typed-text", {
+    strings: ["Web Developer", "Frontend Learner", "Python Enthusiast", "Intern @ SkillCraft"],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+</script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+</body>
+</html>
