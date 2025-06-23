@@ -274,3 +274,14 @@ footer {
 .contact-card a:hover {
   text-decoration: underline;
 }
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 2rem 1rem;
+}
